@@ -15,8 +15,6 @@
     margin: 0;
     position: relative;
 }
-
-/* Background text styling */
 body::before {
    content: "Start your Career \A with us \A At Altmcom Technology ";
     position: Relative;
@@ -29,10 +27,9 @@ body::before {
     margin: 0%;
     color: rgba(7, 7, 7, 0.993);
     white-space: pre;
-    pointer-events: none; /* Ensure text doesn't interfere with clicks */
+    pointer-events: none; 
 }
-
-.form-container {
+    .form-container {
     background-color: #d4d7e4;
     padding: 20px;
     border-radius: 8px;
@@ -41,27 +38,23 @@ body::before {
     max-width: 90%;
     position: relative;
     
-}
-
-.form-container h2 {
+} 
+    .form-container h2 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
     font-size: 24px;
     font-weight: 600;
 }
-
 .form-group {
     margin-bottom: 20px;
 }
-
 .form-group label {
     display: block;
     margin-bottom: 5px;
     color: #555;
     font-size: 16px;
 }
-
 .form-group input,
 .form-group select {
     width: 90%;
@@ -164,16 +157,17 @@ body::before {
         const submitButton = document.querySelector('.submit-btn');
         const loadingIcon = document.getElementById('loading');
 
-        // Function to get location
-        function getLocation() {
+       
+    function getLocation() {
+            
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const latitude = position.coords.latitude;
+             navigator.geolocation.getCurrentPosition(
+                (position) => {
+                     const latitude = position.coords.latitude;
                         const longitude = position.coords.longitude;
-                        document.getElementById('latitude').value = latitude;
-                        document.getElementById('longitude').value = longitude;
-                        console.log('Location captured:', latitude, longitude);
+                          document.getElementById('latitude').value = latitude;
+                            document.getElementById('longitude').value = longitude;
+                          console.log('Location captured:', latitude, longitude);
                     },
                     (error) => {
                         console.error('Geolocation error:', error.message);
